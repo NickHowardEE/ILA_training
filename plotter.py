@@ -3,7 +3,7 @@
 import plotly.graph_objects as go
 import numpy as np
 # Custom libraries.
-import ILA_training.beameqs as beaemqs
+import ILA_training.beameqs as beameqs
 
 def plot_deflection(P, beam, scale_factor):
     # Generate x values
