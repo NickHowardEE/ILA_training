@@ -19,7 +19,7 @@ class Beam:
         self.D_inner = D_outer - 2*t # Inner diameter of the beam.
         self.I = self.moment_of_inertia()
         self.mass = self.mass_of_chs()
-        #self.natural_frequency = natural_frequency(E, self.I, self.mass, L)
+        self.natural_frequency = natural_frequency()
 
     def moment_of_inertia(self):
         return (math.pi / 64) * (self.D_outer**4 - self.D_inner**4)
