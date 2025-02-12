@@ -27,6 +27,10 @@ class Beam:
     def mass_of_chs(self):
         volume = math.pi * (self.D_outer**2 - self.D_inner**2) / 4 * self.L
         return volume * self.material.density
+        
+    def natural_frequency(self):
+        mul = self.mass/self.L # mass per unit length
+        return (1.875**2 / (2 * math.pi)) * ((self.material.E * self.I) / (mul * self.L**4))**0.5
 
 # Equation to calculate deflection of cantilever beam with a point load at the end.
 # x: distance from the fixed end of the beam.
@@ -37,9 +41,7 @@ def deflection(x, P, beam):
 
 
 
-def natural_frequency(E, I, m, L):
-    mul = m/L # mass per unit length
-    return (1.875**2 / (2 * math.pi)) * ((E * I) / (mul * L**4))**0.5
+
 
 def bending_stress(M, D, I):
     y = D / 2
