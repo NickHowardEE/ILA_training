@@ -65,7 +65,7 @@ def plot_frequency(nf,beam):
                                     "frame": {"duration": 90, "redraw": True},  # Adjust frame duration
                                     "fromcurrent": True,
                                     "loop:": True,
-                                    "transition": {"duration": 90, "easing": "linear"},  # Add transition
+                                    "transition": {"duration": 0, "easing": "linear"},  # Add transition
                                 },
                             ],
                         )
