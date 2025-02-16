@@ -28,7 +28,7 @@ def plot_frequency(nf,beam):
     period = 1/nf
     frame_frequency = 0.1
     frames_per_period = period / frame_frequency
-    print (frames_per_period)
+    #print (frames_per_period)
     num_cycles = 10 # Number of cycles in animation.
     num_frames = int(num_cycles*frames_per_period) # Number of frames in the animation.
     num_beam_elements = 10 # Number of elements in the beam.
